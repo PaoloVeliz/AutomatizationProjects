@@ -31,7 +31,7 @@ func isDirEmpty(dirPath string) (bool, error) {
     return false, err
 }
 
-func backup(folder_to_get_files string,folder_to_send_files string, now string) {
+func backup(folder_to_get_files string,folder_to_send_files string) {
     files, err := ioutil.ReadDir(folder_to_get_files)
 	if err != nil {
 		log.Fatal(err)
@@ -66,13 +66,11 @@ func newLogLine(message string){
 
 func main() {
     ticker := time.NewTicker(time.Minute)
-    
-
-    backup("where are the files","where you gonna send them","xd")
+    backup("where are the files","where you gonna send them")
 	for {
         select {
         case <-ticker.C:
-			backup("/home/paolo/code/auto/automatization-projects/automated-file-backup/send","/home/paolo/code/auto/automatization-projects/automated-file-backup/get","xd")
+            backup("where are the files","where you gonna send them")
 		}
 	}
 }
