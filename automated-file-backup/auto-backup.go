@@ -68,7 +68,7 @@ func main() {
     ticker := time.NewTicker(time.Minute)
     
 
-    backup("/home/paolo/code/auto/automatization-projects/automated-file-backup/send","/home/paolo/code/auto/automatization-projects/automated-file-backup/get","xd")
+    backup("where are the files","where you gonna send them","xd")
 	for {
         select {
         case <-ticker.C:
