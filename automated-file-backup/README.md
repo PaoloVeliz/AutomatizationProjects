@@ -11,7 +11,7 @@ Project Requirements:
 
 Automate the backup process:
 
-* Write a Python script that scans the source folder for files.
+* Write a Go script that scans the source folder for files.
 * Copy each file from the source folder to the destination folder.
 * Schedule automatic backups (optional):
 * Implement a basic logging system to keep track of when the backups were performed and which files were copied.
